@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.outter {
+  display: flex;
+  border: red 1px solid;
+  width: 350px;
+  flex-direction: column;
+  padding: 5px;
+  max-height: 500px;
+}
+
+.inner {
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+.card {
+  padding: 20px;
+  background: red;
+  color: white;
+  margin: 5px 0px;
+  width: 100%;
+}

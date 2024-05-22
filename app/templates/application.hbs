@@ -1,0 +1,23 @@
+<div class="outter">
+  <div class="inner">
+    {{#sortable-group
+      tagName="div"
+      onChange=(action "sortItems")
+      as |group|
+    }}
+      {{#each sortedItems as |record|}}
+        {{#sortable-item
+          tagName="div"
+          model=record
+          group=group
+        }}
+          <div class="card">
+            {{record.title}} ({{record.order}})
+          </div>
+        {{/sortable-item}}
+      {{/each}}
+    {{/sortable-group}}
+  </div>
+</div>
+
+{{outlet}}
